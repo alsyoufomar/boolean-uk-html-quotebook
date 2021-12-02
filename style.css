@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Arimo", sans-serif;
+  font-size: 1.2rem;
+  /* height: 100vh; */
+}
+.layout {
+  display: grid;
+  grid-template:
+    "header header header" 160px
+    "left-menu main right-menu" 1fr/
+    20px 1fr 20px;
+}
+header {
+  grid-area: header;
+  background-color: #200757;
+  position: relative;
+  position: sticky;
+  top: -140px;
+}
+.left-menu {
+  grid-area: left-menu;
+  background-color: #a62d4b;
+}
+.list {
+  grid-area: main;
+  background-color: blanchedalmond;
+  display: grid;
+  grid-template-rows: repeat(4, 30rem);
+}
+.right-menu {
+  grid-area: right-menu;
+  background-color: #a62d4b;
+  box-shadow: 12px 0 12px 1px rgba(0, 0, 0, 0.5);
+}
+.einstein,
+.newton {
+  display: grid;
+  grid-template-columns: 55ch 1fr;
+  border-bottom: 0.5rem solid #200757;
+  place-items: center;
+}
+.tesla,
+.euler {
+  display: grid;
+  grid-template-columns: 1fr 55ch;
+  border-bottom: 0.5rem solid #200757;
+  place-items: center;
+}
+img[alt="einstein"],
+img[alt="tesla"],
+img[alt="newton"],
+img[alt="euler"] {
+  width: 24rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+p {
+  margin: 1rem;
+  text-align: justify;
+}
+h2 {
+  font-variant: small-caps;
+  font-size: 2rem;
+  margin: 2rem;
+}
+h1 {
+  margin: 2rem;
+  font-size: 3rem;
+  color: blanchedalmond;
+  background-color: #200757;
+}
+.line {
+  border-right: 0.5rem solid #200757;
+}
+.line-2 {
+  border-left: 0.5rem solid #200757;
+}
